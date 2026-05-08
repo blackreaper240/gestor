@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Glass Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mis Tareas</h1>
+        <div class="input-group">
+            <input type="hidden" id="editId"> 
+            <input type="text" id="taskTitle" placeholder="Título de la tarea...">
+            <textarea id="taskDesc" placeholder="Descripción o detalles..."></textarea>
+            <button id="btnMain" onclick="addTask()">Agregar Tarea</button>
+        </div>
+        <div class="tasks-container">
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

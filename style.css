@@ -1,0 +1,103 @@
+body {
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+h1 { color: #fff; text-align: center; margin-top: 0; }
+
+.input-group { display: flex; flex-direction: column; gap: 10px; }
+
+input, textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.4);
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #007AFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover { background: #0056b3; }
+
+ul { list-style: none; padding: 0; margin-top: 20px; }
+
+.task-item {
+    background: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-info h3 { margin: 0; font-size: 1.1rem; }
+.task-info p { margin: 5px 0 0; font-size: 0.9rem; color: #444; }
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-edit {
+    background: #ff9500;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background: #ff3b30;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* Contenedor scrolleable para la lista de tareas */
+.tasks-container {
+    max-height: 320px; /* ajustable */
+    overflow-y: auto;
+    margin-top: 20px;
+    padding-right: 6px; /* espacio para scrollbar */
+}
+
+/* Estilos de scrollbar  */
+.tasks-container::-webkit-scrollbar { width: 8px; }
+.tasks-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.15); border-radius: 8px; }
+.tasks-container::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 8px; }
+
+@media (max-width: 480px) {
+    .container { padding: 20px; max-width: 360px; }
+    .tasks-container { max-height: 260px; }
+}
